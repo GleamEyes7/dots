@@ -1,0 +1,9 @@
+[core]
+	pager = bat --style=plain --pager='less -RF'
+[user]
+	email = mnifahim07@gmail.com
+	name = Mir Nayeem Islam Fahim
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
