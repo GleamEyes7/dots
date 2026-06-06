@@ -37,10 +37,10 @@ export VISUAL=nvim
 eval "$(starship init bash)"
 
 # Pyenv setup
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
 
 # Git completion
 if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
