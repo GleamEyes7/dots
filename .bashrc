@@ -46,3 +46,19 @@ eval "$(starship init bash)"
 if [ -f ~/.git-completion.bash ]; then . ~/.git-completion.bash; fi
 
 export BROWSER=wslview
+
+pypytime() {
+  if [[ "$1" == *.py ]]; then
+    # Separators: Dim White (\e[2;37m)
+    # Brackets/Text: Bold Green (\e[1;32m)
+    # Time Number (%R): Bold Yellow (\e[1;33m)
+    TIMEFORMAT=$'\e[2;37m===========================\n[\e[0m\e[1;32mExecuted in \e[1;33m%R\e[1;32m seconds\e[2;37m]\e[2;37m\n===========================\e[0m'
+    time pypy3 "$@"
+  else
+    # Fallback to standard pypy3 behavior (REPL, flags, etc.)
+    pypy3 "$@"
+  fi
+}
+
+# Alias so you only have to type 'pypy'
+alias pypy="pypytime"
