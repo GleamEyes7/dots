@@ -62,3 +62,4 @@ pypytime() {
 
 # Alias so you only have to type 'pypy'
 alias pypy="pypytime"
+alias cmd="cmd.exe /c"
